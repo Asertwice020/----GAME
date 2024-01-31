@@ -23,7 +23,6 @@ function playTapAudio() {
     // If the sound is not currently playing
     // Set the flag to indicate that the sound is now playing
     isTapAudioPlaying = true;
-    console.log('audio has been played!');
   }
   else {
     // If the sound is already playing
@@ -87,7 +86,6 @@ function addGameOverWindow() {
 
 function getResult(playerSymbol2) {
   if(playerSymbol2 !== `It's a Draw!`) {
-    console.log(`it's a draw`);
     winCard.innerText = `${playerSymbol2} won`;
   }
   else {
