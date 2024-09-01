@@ -11,9 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --main_color: #1e2c27;
+  --block_color: #393131;
+  --game_over_window_color: #393131;
+}
+
 body {
   position: relative;
-  background-color: #00ffa6;
+  background-color: var(--main_color);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
 }
@@ -63,7 +69,7 @@ h1 {
   --square_commit: calc(var(--square_init) + 0.02rem);
   width: var(--square);
   height: var(--square);
-  background-color: white;
+  background-color: var(--block_color);
   display: grid;
   grid-template-columns: repeat(3, var(--square_commit));
   grid-template-rows: repeat(3, var(--square_commit));
@@ -85,7 +91,7 @@ h1 {
   inset: 0;
   display: grid;
   place-items: center;
-  background: white;
+  background: var(--game_over_window_color);
 }
 .win_card,
 .restart_btn {
@@ -106,6 +112,7 @@ h1 {
   background: #00ffa6;
   color: white;
   transition: all 500ms ease-out;
+  cursor: pointer;
 }
 
 .restart_btn:hover,
